@@ -3,83 +3,135 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
   <meta name="copyright" content="MACode ID, https://www.macodeid.com/">
-  
   <title>B V Harshavardhan Portfolio</title>
-
   <link rel="shortcut icon" href="../assets/Main_Logo.ico" type="image/x-icon">
-  
-  <link rel="stylesheet" type="text/css" href="../assets/css/themify-icons.css">
-  
-  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
-
-  <link rel="stylesheet" type="text/css" href="../assets/vendor/animate/animate.css">
-  
-  <link rel="stylesheet" type="text/css" href="../assets/vendor/owl-carousel/owl.carousel.css">
-  
-  <link rel="stylesheet" type="text/css" href="../assets/vendor/perfect-scrollbar/css/perfect-scrollbar.css">
-  
-  <link rel="stylesheet" type="text/css" href="../assets/vendor/nice-select/css/nice-select.css">
-  
-  <link rel="stylesheet" type="text/css" href="../assets/vendor/fancybox/css/jquery.fancybox.min.css">
-  
-  <link rel="stylesheet" type="text/css" href="../assets/css/virtual.css">
-  
-  <link rel="stylesheet" type="text/css" href="../assets/css/topbar.virtual.css">
+  <link rel="stylesheet" href="../assets/css/themify-icons.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap.css">
+  <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
+  <link rel="stylesheet" href="../assets/vendor/owl-carousel/owl.carousel.css">
+  <link rel="stylesheet" href="../assets/vendor/perfect-scrollbar/css/perfect-scrollbar.css">
+  <link rel="stylesheet" href="../assets/vendor/nice-select/css/nice-select.css">
+  <link rel="stylesheet" href="../assets/vendor/fancybox/css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="../assets/css/virtual.css">
+  <link rel="stylesheet" href="../assets/css/topbar.virtual.css">
   <style>
-    .video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background: #000;
-}
-
-.video-container iframe, .video-container object, .video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-.owl-carousel .item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.sci-fi-element {
+    /* Sci-fi element */
+    .sci-fi-element {
       display: inline-block;
-      
       background-color: #0d0d0d;
       padding: 5px 10px;
-      color: #fafafa; /* Neon green text */
-      /* border: 2px solid #ff0000; Neon green border */
-      font-family: 'Orbitron', sans-serif; /* Sci-fi font */
+      color: #fafafa;
+      font-family: 'Orbitron', sans-serif;
       text-transform: uppercase;
       text-align: center;
-      box-shadow: 0 0 10px #ffffff, 0 0 20px #fffcfc, 0 0 30px #d7d6d6; 
+      box-shadow: 0 0 10px #fff, 0 0 20px #fffcfc, 0 0 30px #d7d6d6;
       transition: all 0.3s ease-in-out;
     }
+    /* Skill badges animation */
+    @keyframes popIn {
+      0%   { transform: scale(0.5); opacity: 0; }
+      70%  { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .skill-badges .badge {
+      position: relative;
+      display: inline-block;
+      padding: 0.6rem 1rem;
+      margin: 0.5rem;
+      font-size: 1rem;
+      border-radius: 1.5rem;
+      color: #fbfbfb;
+      background: rgba(241, 8, 8, 0.8);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      backdrop-filter: blur(4px);
+      opacity: 0;
+      transform: scale(0.5);
+      animation: popIn 0.5s forwards;
+    }
+    /* Stagger delays for badges */
+    .skill-badges .badge:nth-child(n) { animation-delay: calc(0.1s * var(--i)); }
+    .skill-badges .badge:nth-child(1)  { --i:1; }
+    .skill-badges .badge:nth-child(2)  { --i:2; }
+    .skill-badges .badge:nth-child(3)  { --i:3; }
+    .skill-badges .badge:nth-child(4)  { --i:4; }
+    .skill-badges .badge:nth-child(5)  { --i:5; }
+    .skill-badges .badge:nth-child(6)  { --i:6; }
+    .skill-badges .badge:nth-child(7)  { --i:7; }
+    .skill-badges .badge:nth-child(8)  { --i:8; }
+    .skill-badges .badge:nth-child(9)  { --i:9; }
+    .skill-badges .badge:nth-child(10) { --i:10; }
+    .skill-badges .badge:nth-child(11) { --i:11; }
+    .skill-badges .badge:nth-child(12) { --i:12; }
+    .skill-badges .badge:nth-child(13) { --i:13; }
+    .skill-badges .badge:nth-child(14) { --i:14; }
+    .skill-badges .badge:nth-child(15) { --i:15; }
+    .skill-badges .badge:nth-child(16) { --i:16; }
+    .skill-badges .badge:nth-child(17) { --i:17; }
+    .skill-badges .badge:nth-child(18) { --i:18; }
+    .skill-badges .badge:nth-child(19) { --i:19; }
+    .skill-badges .badge:nth-child(20) { --i:20; }
+    /* Owl carousel center items */
+    .owl-carousel .item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /* Responsive video container for cards */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      background: #000;
+      border-radius: 0.5rem 0.5rem 0 0;
+      max-width: 100%;
+    }
+    .video-container iframe,
+    .video-container object,
+    .video-container embed {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border-radius: 0.5rem 0.5rem 0 0;
+    }
+    .card .caption {
+      background: #f4fafa;
+      color: #000000;
+      border-radius: 0 0 0.5rem 0.5rem;
+    }
+    .card .btn-theme-outline {
+      margin-top: 0.5rem;
+    }
+    @media (max-width: 991.98px) {
+      .row-cols-lg-3 > .col {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    }
+    @media (max-width: 767.98px) {
+      .row-cols-md-2 > .col,
+      .row-cols-lg-3 > .col {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      .filterable-button {
+        flex-direction: column !important;
+        align-items: stretch !important;
+      }
+    }
   </style>
-
-
 </head>
 <body class="theme-red">
-  
   <!-- Back to top button -->
   <div class="btn-back_to_top">
     <span class="ti-arrow-up"></span>
   </div>
-  
-  <div class="vg-page page-home" id="home" 
-  style="background-image: url(../assets/img/jordi-baste-tv3.gif); 
-         background-size: cover; 
-         background-position: center; 
-         height: 100vh;">
+
+  <!-- Home Section -->
+  <div class="vg-page page-home" id="home"
+    style="background-image: url(../assets/img/jordi-baste-tv3.gif); background-size: cover; background-position: center; height: 100vh;">
     <!-- Navbar -->
     <div class="navbar navbar-expand-lg navbar-dark sticky" data-offset="0">
       <div class="container">
@@ -103,7 +155,10 @@
               <a href="#skills" class="nav-link" data-animate="scrolling"><span style="color: #fdfdfd;"><b>Skills</b></a></span>
             </li>
             <li class="nav-item">
-              <a href="#experience" class="nav-link" data-animate="scrolling"><span style="color: #fdfdfd;"><b>Experience & Education</b></a></span>
+              <a href="#education" class="nav-link" data-animate="scrolling"><span style="color: #fdfdfd;"><b>Education</b></a></span>
+            </li>
+            <li class="nav-item">
+              <a href="#workexp" class="nav-link" data-animate="scrolling"><span style="color: #fdfdfd;"><b>Experience</b></a></span>
             </li>
             <li class="nav-item">
               <a href="#projects" class="nav-link" data-animate="scrolling"><span style="color: #fdfdfd;"><b>Projects</b></a></span>
@@ -146,358 +201,464 @@
           <h5 class="fg-theme mb-3">UI/UX & Web Designer</h5> -->
           <p class="text-muted">
             <b>Aiming for <span style="color: #e6490b;">"A Future Beyond Our Star"</span></b><br>
-            I am presently an undergraduate student pursuing mechanical engineering from National Institute of Technology Silchar. <br><br>
-            Fascination with machines such as <b>virtual assistants, robots, drones, rockets and space rovers</b> have always oriented my passion towards robotics and space engineering. <br><br>
-            Robotics captivates me with its blend of <b> mechanical design, electronics, and artificial intelligence</b>. The idea of creating systems that interact with the world and perform complex tasks is exciting.<br><br>
-            In addition to my technical pursuits, I am also drawn to philosophy, video games, novels, and anime. These interests provide me with a creative balance, offering fresh perspectives and insights for creating unique machines.<br><br>
+            I am presently a graduate student pursuing robotics engineering from Johns Hopkins University. <br><br>
+            I specialize in the design, development, and implementation of robotic systems.  <br><br>
+            My expertise lies in integrating sensors, actuators, and control systems, as well as programming robots using various languages and software.<br><br>
+            I believe in multi-disciplinary approach to robotics where I try to understand both hardware and software aspects of these wonderful machines.<br><br>
+            My main areas of interest are: 
           </p>
           <ul class="theme-list">
-            <li><b>Robotics</b></li>
-            <li><b>Computer Aided Design and Analysis</b></li>
+            <li><b>Perception</b></li>
+            <li><b>Navigation</b></li>
             <li><b>Reinforcement Learning</b></li>
             <li><b>Artificial Intelligence</b></li>
             <li><b>Control Systems</b></li>
           </ul>
-          <p><a href="../assets/CV.pdf"><button class="btn btn-theme-outline">CV</button></a>
-          <a href="../assets/Resume.pdf"><button class="btn btn-theme-outline">Resume</button></a></p>
+          <p><a href="../assets/Resume.pdf"><button class="btn btn-theme-outline">Resume</button></a></p>
           
         </div>
       </div>
     </div>
   </div>
+
+  <!-- SKILLS -->
   <div class="vg-page page-skills" id="skills">
     <div class="container py-5">
-      <h1 class="text-center fw-normal wow fadeIn">My Skills<br> <br> </h1>
-      <div class="row py-3">
-        <div class="col-md-6">
-          <div class="px-lg-3">
-            <div class="skill-wrapper wow fadeInUp d-flex align-items-center" style="margin-bottom: 20px;">
-              <span class="caption"><strong>Python</strong></span>
-              <div class="stars ml-auto" style="color: red;">
-                ★★★★★
-              </div>
-            </div>
-            <div class="skill-wrapper wow fadeInUp d-flex align-items-center" style="margin-bottom: 20px;">
-              <span class="caption"><strong>Matlab and Simulink</strong></span>
-              <div class="stars ml-auto" style="color: red;">
-                ★★★★☆
-              </div>
-            </div>
-            <div class="skill-wrapper wow fadeInUp d-flex align-items-center" style="margin-bottom: 20px;">
-              <span class="caption"><strong>C</strong></span>
-              <div class="stars ml-auto" style="color: red;">
-                ★★★★☆
-              </div>
-            </div>
-            <div class="skill-wrapper wow fadeInUp d-flex align-items-center" style="margin-bottom: 20px;">
-              <span class="caption"><strong>C# and Unity Engine</strong></span>
-              <div class="stars ml-auto" style="color: red;">
-                ★★★★☆
-              </div>
-            </div>
-            <div class="skill-wrapper wow fadeInUp d-flex align-items-center" style="margin-bottom: 20px;">
-              <span class="caption"><strong>ROS2 and Gazebo</strong></span>
-              <div class="stars ml-auto" style="color: red;">
-                ★★★★☆
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="px-lg-3">
-            <div class="skill-wrapper wow fadeInUp d-flex align-items-center" style="margin-bottom: 20px;">
-              <span class="caption"><strong>Solidworks</strong></span>
-              <div class="stars ml-auto" style="color: red;">
-                ★★★★★
-              </div>
-            </div>
-            <div class="skill-wrapper wow fadeInUp d-flex align-items-center" style="margin-bottom: 20px;">
-              <span class="caption"><strong>ANSYS</strong></span>
-              <div class="stars ml-auto" style="color: red;">
-                ★★★★☆
-              </div>
-            </div>
-            <div class="skill-wrapper wow fadeInUp d-flex align-items-center" style="margin-bottom: 20px;">
-              <span class="caption"><strong>Arduino and ESP32</strong></span>
-              <div class="stars ml-auto" style="color: red;">
-                ★★★★☆
-              </div>
-            </div>
-            <div class="skill-wrapper wow fadeInUp d-flex align-items-center" style="margin-bottom: 20px;">
-              <span class="caption"><strong>Machine Learning and AI</strong></span>
-              <div class="stars ml-auto" style="color: red;">
-                ★★★★☆
-              </div>
-            </div>
-            <div class="skill-wrapper wow fadeInUp d-flex align-items-center" style="margin-bottom: 20px;">
-              <span class="caption"><strong>C++</strong></span>
-              <div class="stars ml-auto" style="color: red;">
-                ★★★★☆
-              </div>
-            </div>
-          </div>
+      <h1 class="text-center fw-normal wow fadeIn">Skills & Frameworks</h1>
+      <div class="row justify-content-center py-4">
+        <div class="col-lg-10 skill-badges d-flex flex-wrap justify-content-center">
+          <span class="badge">Python</span>
+          <span class="badge">MATLAB &amp; Simulink</span>
+          <span class="badge">C &amp; C++</span>
+          <span class="badge">C# &amp; Unity</span>
+          <span class="badge">ROS2 &amp; Gazebo</span>
+          <span class="badge">SolidWorks</span>
+          <span class="badge">ANSYS (CFD &amp; FEA)</span>
+          <span class="badge">Arduino &amp; ESP32</span>
+          <span class="badge">Machine Learning &amp; AI</span>
+          <span class="badge">MuJoCo</span>
+          <span class="badge">PyTorch</span>
+          <span class="badge">TensorFlow</span>
+          <span class="badge">Git &amp; GitHub</span>
+          <span class="badge">Reinforcement Learning</span>
+          <span class="badge">OpenCV</span>
+          <span class="badge">Raspberry Pi</span>
+          <span class="badge">Linux</span>
+          <span class="badge">Control Systems &amp; Optimization</span>
+          <span class="badge">SLAM</span>
+          <span class="badge">Mechanical Design</span>
         </div>
       </div>
     </div>
   </div>
   
-  
-  
-  
-  
-  <div class="vg-page page-experience" id="experience">
-    <div class="container pt-xl-0">
-      <div class="row">
-        <div class="col-md-4 wow fadeInRight">
-          <h2 class="fw-normal">Education</h2>
-          <ul class="timeline mt-4 pr-md-5">
-            <li>
-              <div class="title">2024-2025</div>
-              <div class="details">
-                <h5>Indian Institute of Technology Hyderabad</h5>
-                <small class="fg-theme">Bachelor of Technology</small>
-                <p>Mechanical Engineering <br>CGPA: 9.12</p>
-              </div>
-            </li>
-            <li>
-              <div class="title">2021-2024</div>
-              <div class="details">
-                <h5>National Institute of Technology Silchar</h5>
-                <small class="fg-theme">Bachelor of Technology</small>
-                <p>Mechanical Engineering <br>CGPA: 9.12</p>
-              </div>
-            </li>
-            <li>
-              <div class="title">2019-2021</div>
-              <div class="details">
-                <h5>Doon International School</h5>
-                <small class="fg-theme">CBSE</small>
-                <p>Class 12 <br>Percentage: 93.8%</p>
-              </div>
-            </li>
-            <li>
-              <div class="title">2009-2019</div>
-              <div class="details">
-                <h5>Bright Lands School</h5>
-                <small class="fg-theme">ICSE</small>
-                <p>Class 10 <br>Percentage: 98%</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-4 wow fadeInRight" data-wow-delay="200ms">
-          <h2 class="fw-normal">Internships</h2>
-          <ul class="timeline mt-4 pr-md-5">
-            <li>
-              <div class="title">2024</div>
-              <div class="details">
-                <h5>Indian Institute of Technology Madras</h5>
-                <small class="fg-theme">Summer Fellow</small>
-                <p>Selected for the prestigious Summer Fellowship Programme (SFP) in the Aerospace Department. Worked on an open-source ocean environment for ship and drone simulation.<br>Supervisor: Dr.Devaprakash Muniraj</p>
-              </div>
-            </li>
-            <li>
-              <div class="title">2023</div>
-              <div class="details">
-                <h5>Instruments Research and Development Establishment(DRDO)</h5>
-                <small class="fg-theme">Summer Intern</small>
-                <p>Entrusted with the critical task of designing and analyzing ammunition mountings for drones, terrain vehicles, and naval vessels. Played a key role in conceptualizing an innovative approach to utilize Ocean Buoys for advanced coastline
-                  surveillance.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-4 wow fadeInRight" data-wow-delay="300ms">
-          <h2 class="fw-normal">Research Experience</h2>
-          <ul class="timeline mt-4 pr-md-5">
-            <li>
-              <div class="title">Current</div>
-              <div class="details">
-                <h5>Indian Institute of Technology Hyderabad</h5>
-                <small class="fg-theme">Project</small>
-                <p> Creating a Quadruped Robot Dog from scratch having unique terrain capabilities.</p>
-              </div>
-            </li>
-            <li>
-              <div class="title">2022-2024</div>
-              <div class="details">
-                <h5>National Institute of Technology Silchar</h5>
-                <small class="fg-theme">Undergraduate Research Assistant</small>
-                <p>Tasked with the setup of a micro-stereo lithography system, and this entailed: conducting a detailed comparison
-                  between the printed outputs and actuators constructed using Nitinol springs.<br>Supervisor: Dr.Yogesh Singh<br><br> Actively worked on the design and development of machine learning models. These models leveraged data from
-                  IoT devices to predict human activity patterns, contributing to a more informed understanding of user behavior
-                  in varying environments.<br>Supervisor: Dr. Ramanujam E<br></p>
-              </div>
-            </li>
-            </ul>
-         </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  
+  <!-- Education -->
+  <div class="vg-page page-experience" id="education">
+  <div class="container pt-xl-0">
+    <h1 class="text-center fw-normal wow fadeIn">Education</h1>
 
+    <div class="row justify-content-center">
+      <div class="col-12 wow fadeInRight">
+        <div class="timeline mt-4">
+          <div class="timeline__line"></div>
+          
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <h5>Johns Hopkins University</h5>
+              <span class="timeline__date">2025 – Present</span>
+              <p>M.S.E in Robotics<br></p>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <h5>Indian Institute of Technology Hyderabad</h5>
+              <span class="timeline__date">2024 – 2025</span>
+              <p>B.Tech in Mechanical Engineering Exchange Student<br>CGPA: 9.63/10 || GPA: 3.9/4.0</p>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <h5>NIT Silchar</h5>
+              <span class="timeline__date">2021 – 2024</span>
+              <p>B.Tech in Mechanical Engineering<br>CGPA: 9.20/10 || GPA: 3.85/4.0</p>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <h5>Doon International School</h5>
+              <span class="timeline__date">2019 – 2021</span>
+              <p>Class 12 (CBSE)<br>93.8%</p>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <h5>Bright Lands School</h5>
+              <span class="timeline__date">2009 – 2019</span>
+              <p>Class 10 (ICSE)<br>98%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Work / Research Experience -->
+<div class="vg-page page-experience" id="workexp">
+  <div class="container pt-xl-0">
+    <h1 class="text-center fw-normal wow fadeIn">Experience</h1>
+
+    <div class="row justify-content-center">
+      <div class="col-12 wow fadeInRight">
+        <div class="timeline mt-4">
+          <div class="timeline__line"></div>
+
+          <!-- IIT Madras -->
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <h5>Indian Institute of Technology Madras</h5>
+              <span class="timeline__date">Summer Fellow &mdash; May 2024 – Jul 2024</span>
+              <ul>
+                <li>Won the prestigious Summer Fellowship (SFP-2024) at the Department of Aerospace Engineering, standing out
+ among 1000 plus applicants for excellence in robotics research.</li>
+                <li>Designed and implemented an open-source ocean environment for ship & drone simulation using Unity.</li>
+                <li>Integrated ROS2 Bridge to enable real-time data exchange between simulation and robotics middleware.</li>
+              </ul>
+              <p><strong>Supervisor:</strong> Dr. Devaprakash Muniraj</p>
+            </div>
+          </div>
+
+          <!-- DRDO IRDE -->
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <h5>Instruments Research & Development Establishment (DRDO)</h5>
+              <span class="timeline__date">Summer Intern &mdash; May 2023 – Jul 2023</span>
+              <ul>
+                <li>Designed and analyzed ammunition mounting systems for UAVs, UGVs, and naval vessels.</li>
+                <li>Prototyped an autonomous coastal surveillance system using distributed sensor-equipped ocean buoys, reducing
+ operational costs by 30%</li>
+                <li>Assisted in developing a scalable hardware-software integration pipeline for deploying multi-sensor payloads
+ (EO/IR cameras, LiDAR) on mobile defense platforms.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- IIT Hyderabad Project -->
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <h5>Indian Institute of Technology Hyderabad</h5>
+              <span class="timeline__date">Undergraduate Project &mdash; Aug 2024 – May 2025</span>
+              <ul>
+                <li>Designed and built a 12-DOF quadruped robot from the ground up.</li>
+                <li>Developed an ant-inspired gripper for the quadruped—improved object transport time by 32.5%.</li>
+                <li>Implemented control architecture on Raspberry Pi 5 (Ubuntu, ROS2) for autonomous locomotion.</li>
+              </ul>
+              <p><strong>Supervisor:</strong> Dr. R. Prasanth Kumar</p>
+            </div>
+          </div>
+
+          <!-- NIT Silchar -->
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <h5>National Institute of Technology Silchar</h5>
+              <span class="timeline__date">Undergraduate Research Assistant &mdash; Aug 2022 – Aug 2023</span>
+              <ul>
+                <li>Set up and calibrated a micro-stereolithography 3D printer for high-precision fabrication.</li>
+                <li>Benchmarked printed outputs against Nitinol-spring actuators to assess performance.</li>
+                <li>Developed complete printer control firmware—boosted print speed by 12.2%.</li>
+              </ul>
+              <p><strong>Supervisor:</strong> Dr. Yogesh Singh</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
   
   <!-- Portfolio page -->
   <div class="vg-page page-projects" id="projects">
     <div class="container">
-      <h1 class="text-center fw-normal wow fadeInUp">Check out my Constructs</h1>
-      <div class="filterable-button py-lg-5 wow fadeInUp" data-toggle="selected">
-        <button class="btn btn-theme-outline selected" data-filter="*">All</button>
-        <button class="btn btn-theme-outline" data-filter=".robotics">Robotics</button>
-        <button class="btn btn-theme-outline" data-filter=".design">Design & Analysis</button>
-        <button class="btn btn-theme-outline" data-filter=".ai">Artificial Intelligence</button>
-        <button class="btn btn-theme-outline" data-filter=".simulation">Simulation</button>
+      <h1 class="text-center fw-normal wow fadeInUp mb-4">Check out my Constructs</h1>
+      <div class="filterable-button py-lg-4 py-2 wow fadeInUp d-flex flex-wrap justify-content-center gap-2" data-toggle="selected">
+        <button class="btn btn-theme-outline selected m-1" data-filter="*">All</button>
+        <button class="btn btn-theme-outline m-1" data-filter=".perception">Perception</button>
+        <button class="btn btn-theme-outline m-1" data-filter=".navigation">Navigation & Planning</button>
+        <button class="btn btn-theme-outline m-1" data-filter=".localization">Localization & Mapping</button>
+        <button class="btn btn-theme-outline m-1" data-filter=".rl">Reinforcement Learning</button>
+        <button class="btn btn-theme-outline m-1" data-filter=".controls">Controls</button>
+        <button class="btn btn-theme-outline m-1" data-filter=".ai">Artificial Intelligence</button>
+        <button class="btn btn-theme-outline m-1" data-filter=".design">Design & Analysis</button>
+        <button class="btn btn-theme-outline m-1" data-filter=".software">Software Engineering</button>
       </div>
 
-      <div class="gridder my-3">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 my-3 gridder">
+        <!-- CERBRUS -->
+         <div class="col grid-item perception controls localization navigation design ai software wow zoomIn">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="img-place" data-src="../assets/img/Cerbrus_img.png" data-fancybox data-caption="<h5 class='fg-theme'>CERBRUS- Open Source Quadruped Robot Platform</h5> <p>Solo Project</p>">
+              <div class="video-container rounded-top">
+                <iframe src="https://www.youtube.com/embed/7aDOSGi9X7s?si=7VuQQtqi1STEBqhT" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="caption p-3">
+                <h5 class="fg-theme">CERBRUS- Open Source Quadruped Robot Platform</h5>
+                <p>Built as a solo project, this robot is designed for navigating and interacting with cluttered environments, with potential applications in search and rescue, space robotics, and agriculture.</p>
+                <button class="btn btn-theme-outline btn-sm" onclick="window.open('https://github.com/Mandred009/CERBRUS-OpenSource-Quadruped', '_blank')">View on GitHub</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PPO RL -->
+         <div class="col grid-item rl wow zoomIn">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="img-place" data-src="../assets/img/PPO_Bipedal.png" data-fancybox data-caption="<h5 class='fg-theme'> Proximal Policy Optimization for Bipedal Walker from Scratch </h5> <p>Solo Project</p>">
+              <div class="video-container rounded-top">
+                <iframe src="https://www.youtube.com/embed/Y93BZ3Sv6E4?si=o4Zk2dBozj3FNAwS" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="caption p-3">
+                <h5 class="fg-theme">Proximal Policy Optimization(PPO) for Bipedal Walker from Scratch</h5>
+                <p>Solved the Bipedal Walker environment using PPO algorithm built from scratch using PyTorch.</p>
+                <button class="btn btn-theme-outline btn-sm" onclick="window.open('https://github.com/Mandred009/RL_Concepts', '_blank')">View on GitHub</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SAC RL -->
+         <div class="col grid-item rl wow zoomIn">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="img-place" data-src="../assets/img/SAC_Cheetah.png" data-fancybox data-caption="<h5 class='fg-theme'> Soft Actor Critic for Half Cheetah from Scratch </h5> <p>Solo Project</p>">
+              <div class="video-container rounded-top">
+                <iframe src="https://www.youtube.com/embed/Ax48MPtWK1E?si=EMGJVeTcSrBEonBb" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="caption p-3">
+                <h5 class="fg-theme">Soft Actor Critic(SAC) for Half Cheetah from Scratch</h5>
+                <p>Solved the Half Cheetah environment using SAC algorithm built from scratch using PyTorch.</p>
+                <button class="btn btn-theme-outline btn-sm" onclick="window.open('https://github.com/Mandred009/RL_Concepts', '_blank')">View on GitHub</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TD3 RL -->
+         <div class="col grid-item rl wow zoomIn">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="img-place" data-src="../assets/img/TD3_Pendulum.png" data-fancybox data-caption="<h5 class='fg-theme'> Time Delayed Deep Deterministic Policy Gradients for Inverted Pendulum from Scratch </h5> <p>Solo Project</p>">
+              <div class="video-container rounded-top">
+                <iframe src="https://www.youtube.com/embed/tEAPfo0aT0U?si=ho0sVHPd9xEEkrow" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="caption p-3">
+                <h5 class="fg-theme">Time Delayed Deep Deterministic Policy Gradients(TD3) for Inverted Pendulum from Scratch</h5>
+                <p>Solved the Inverted Pendulum environment using TD3 algorithm built from scratch using PyTorch.</p>
+                <button class="btn btn-theme-outline btn-sm" onclick="window.open('https://github.com/Mandred009/RL_Concepts', '_blank')">View on GitHub</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!--CYCLOPS-->
-        <div class="grid-item robotics ai wow zoomIn">
-          <div class="img-place" data-src="../assets/img/Cyclops_collage.png" data-fancybox data-caption="<h5 class='fg-theme'>Cyclops- Personal Desktop Assistant Bot</h5> <p>Team Project</p>">
-              <div class="video-container">
-                  <iframe src="https://www.youtube.com/embed/pLsZuGyLnUM?si=aIpDi6D9957tFNzv" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="col grid-item ai perception controls wow zoomIn">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="img-place" data-src="../assets/img/Cyclops_collage.png" data-fancybox data-caption="<h5 class='fg-theme'>Cyclops- Personal Desktop Assistant Bot</h5> <p>Team Project</p>">
+              <div class="video-container rounded-top">
+                <iframe src="https://www.youtube.com/embed/pLsZuGyLnUM?si=aIpDi6D9957tFNzv" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
-              <div class="caption">
-                  <h5 class="fg-theme">Cyclops- Personal Desktop Assistant Bot</h5>
-                  <p>A bot based on quantized Mistral 7B LLM running locally.<br> <br> <br> <br> <br> <br> </p>
-                  <button class="btn btn-theme-outline" onclick="window.open('https://github.com/Mandred-Tech/Cyclops', '_blank')">View on GitHub</button>
+              <div class="caption p-3">
+                <h5 class="fg-theme">Cyclops- Personal Desktop Assistant Bot</h5>
+                <p>A bot based on quantized Mistral 7B LLM running locally.</p>
+                <button class="btn btn-theme-outline btn-sm" onclick="window.open('https://github.com/Mandred-Tech/Cyclops', '_blank')">View on GitHub</button>
               </div>
+            </div>
           </div>
         </div>
+
+        <!--WeBots Drone RRT-->
+        <div class="col grid-item navigation localization software wow zoomIn">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="img-place" data-src="../assets/img/Drone_RRT.png" data-fancybox data-caption="<h5 class='fg-theme'>Rapidly Exploring Random Trees Algorithm for Drone in WeBots</h5> <p>Solo Project</p>">
+              <div class="video-container rounded-top">
+                <iframe src="https://www.youtube.com/embed/98CDctVLWiY?si=zScvIaQuSUzfViOv" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="caption p-3">
+                <h5 class="fg-theme">Rapidly Exploring Random Trees(RRT) Algorithm for Drone in WeBots</h5>
+                <p>Implemented RRT algorithm for drone navigation in WeBots using PyMavLink for Ardupilot SITL.</p>
+                <button class="btn btn-theme-outline btn-sm" onclick="window.open('https://github.com/Mandred009/WeBots_Drone_RRT_Algo', '_blank')">View on GitHub</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!--QUASAR-->
-        <div class="grid-item robotics design wow zoomIn">
-          <div class="img-place" data-src="../assets/img/Quasar_collage.png" data-fancybox data-caption="<h5 class='fg-theme'>Quasar- A Solar Powered Bot</h5> <p>Team Project</p>">
-            <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/sMuOwO_1F5o?si=uqwkep5HKzxDzOfa" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="caption">
-              <h5 class="fg-theme">Quasar- A Solar Powered Bot</h5>
-              <p>Our team took part in the ASME EFX Student Design Competition 2023 held in Bengaluru. I was responsible for creating the radio module as well as the power train which included using the solar panels to charge the array of super capacitors.<br> <br> <br> </p>
+        <div class="col grid-item design perception navigation controls wow zoomIn">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="img-place" data-src="../assets/img/Quasar_collage.png" data-fancybox data-caption="<h5 class='fg-theme'>Quasar- A Solar Powered Bot</h5> <p>Team Project</p>">
+              <div class="video-container rounded-top">
+                <iframe src="https://www.youtube.com/embed/sMuOwO_1F5o?si=uqwkep5HKzxDzOfa" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="caption p-3">
+                <h5 class="fg-theme">Quasar- A Solar Powered Bot</h5>
+                <p>ASME EFX Student Design Competition 2023. Created the radio module and power train using solar panels and super capacitors.</p>
+              </div>
             </div>
           </div>
         </div>
+
         <!--BADOSE-->
-        <div class="grid-item robotics simulation wow zoomIn">
-          <div class="img-place" data-src="../assets/img/badose.png" data-fancybox data-caption="<h5 class='fg-theme'>BADOSE: Boat and Drone Ocean Simulated Environment</h5> <p>Solo Intern Project</p>">
-            <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/B2RB6MLrWWM?si=WHlJf8Ll9ajt_4aa" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="caption">
-              <h5 class="fg-theme">BADOSE: Boat and Drone Ocean Simulated Environment</h5>
-              <p>BADOSE is an open-source simulator built with the Unity Engine and supported by a ROS 2 connection interface. The main aim of this simulator is to provide an environment capable of handling both drones and boats/ships along with the physics involving ocean turbulence and winds.<br>  </p>
-              <button class="btn btn-theme-outline" onclick="window.open('https://github.com/Mandred009/BADOSE-Simulator', '_blank')">View on GitHub</button>
+        <div class="col grid-item controls software wow zoomIn">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="img-place" data-src="../assets/img/badose.png" data-fancybox data-caption="<h5 class='fg-theme'>BADOSE: Boat and Drone Ocean Simulated Environment</h5> <p>Solo Intern Project</p>">
+              <div class="video-container rounded-top">
+                <iframe src="https://www.youtube.com/embed/B2RB6MLrWWM?si=WHlJf8Ll9ajt_4aa" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="caption p-3">
+                <h5 class="fg-theme">BADOSE: Boat and Drone Ocean Simulated Environment</h5>
+                <p>Open-source Unity simulator with ROS 2 interface for drones and boats, simulating ocean turbulence and winds.</p>
+                <button class="btn btn-theme-outline btn-sm" onclick="window.open('https://github.com/Mandred009/BADOSE-Simulator', '_blank')">View on GitHub</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="gridder my-3">
+
         <!--Human Navi-->
-        <div class="grid-item robotics simulation ai wow zoomIn">
-          <div class="img-place" data-src="../assets/img/ros2_turtlebot_thumb.png" data-fancybox data-caption="<h5 class='fg-theme'>Human Navigator Based Cartography in ROS2.</h5> <p>Solo Project</p>">
-            <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/osZ-PJPvB2g?si=OfX9gfxxSZcoBIBy" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="caption">
-              <h5 class="fg-theme">Human Navigator Based Cartography in ROS2.</h5>
-              <p>The turtlebot3 is simulated to follow human's pose and then perform SLAM without any external controller.<br> <br> <br> </p>
-              <button class="btn btn-theme-outline" onclick="window.open('https://github.com/Mandred009/turtlebot2_ros2_human_cartography', '_blank')">View on GitHub</button>
+        <div class="col grid-item perception navigation localization controls ai wow zoomIn">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="img-place" data-src="../assets/img/ros2_turtlebot_thumb.png" data-fancybox data-caption="<h5 class='fg-theme'>Human Navigator Based Cartography in ROS2.</h5> <p>Solo Project</p>">
+              <div class="video-container rounded-top">
+                <iframe src="https://www.youtube.com/embed/osZ-PJPvB2g?si=OfX9gfxxSZcoBIBy" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="caption p-3">
+                <h5 class="fg-theme">Human Navigator Based Cartography in ROS2.</h5>
+                <p>Turtlebot3 follows human pose and performs SLAM autonomously.</p>
+                <button class="btn btn-theme-outline btn-sm" onclick="window.open('https://github.com/Mandred009/turtlebot2_ros2_human_cartography', '_blank')">View on GitHub</button>
+              </div>
             </div>
           </div>
         </div>
+
         <!--ABB Arm-->
-        <div class="grid-item robotics simulation wow zoomIn">
-          <div class="img-place" data-src="../assets/img/ABB_arm_sim.png" data-fancybox data-caption="<h5 class='fg-theme'>ABB Robot Arm Simulation and Control.</h5> <p>Solo Project</p>">
-            <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/ejYSKvZ1d4A?si=h-otIYOlGO-5vkS2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="caption">
-              <h5 class="fg-theme">ABB Robot Arm Simulation and Control.</h5>
-              <p>Created a simulation of ABB 1200 robot arm and performed path and trajectory planning using Moveit.<br> <br> <br> </p>
-              <button class="btn btn-theme-outline" onclick="window.open('https://github.com/Mandred009/custom_robot_ros2_moveit2_template?tab=readme-ov-file', '_blank')">View on GitHub</button>
+        <div class="col grid-item navigation controls software wow zoomIn">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="img-place" data-src="../assets/img/ABB_arm_sim.png" data-fancybox data-caption="<h5 class='fg-theme'>ABB Robot Arm Simulation and Control.</h5> <p>Solo Project</p>">
+              <div class="video-container rounded-top">
+                <iframe src="https://www.youtube.com/embed/ejYSKvZ1d4A?si=h-otIYOlGO-5vkS2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="caption p-3">
+                <h5 class="fg-theme">ABB Robot Arm Simulation and Control.</h5>
+                <p>Simulated ABB 1200 arm and performed path/trajectory planning using Moveit in C++.</p>
+                <button class="btn btn-theme-outline btn-sm" onclick="window.open('https://github.com/Mandred009/custom_robot_ros2_moveit2_template?tab=readme-ov-file', '_blank')">View on GitHub</button>
+              </div>
             </div>
           </div>
         </div>
+
         <!--SURVIVE-RL-->
-        <div class="grid-item simulation ai wow zoomIn">
-          <div class="img-place" data-src="../assets/img/SurviveRL_thumb.png" data-fancybox data-caption="<h5 class='fg-theme'>SurviveRL- A multiagent reinforcement learning environment.</h5> <p>Team Project</p>">
-            <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/jYEJakEAMzM?si=grmrmU9v1RBtz1-5" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="caption">
-              <h5 class="fg-theme">SurviveRL- A multiagent reinforcement learning environment.</h5>
-              <p>A Pygame based reinforcement learning environment made to train multiple agents for various use cases like swarm robotics and multi-agent interactions.</p>
-              <button class="btn btn-theme-outline" onclick="window.open('https://github.com/Mandred-Tech/Survive-RL', '_blank')">View on GitHub</button>
+        <div class="col grid-item software rl ai wow zoomIn">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="img-place" data-src="../assets/img/SurviveRL_thumb.png" data-fancybox data-caption="<h5 class='fg-theme'>SurviveRL- A multiagent reinforcement learning environment.</h5> <p>Team Project</p>">
+              <div class="video-container rounded-top">
+                <iframe src="https://www.youtube.com/embed/jYEJakEAMzM?si=grmrmU9v1RBtz1-5" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="caption p-3">
+                <h5 class="fg-theme">SurviveRL- A multiagent reinforcement learning environment.</h5>
+                <p>Pygame-based RL environment for multi-agent training (swarm robotics, interactions).</p>
+                <button class="btn btn-theme-outline btn-sm" onclick="window.open('https://github.com/Mandred-Tech/Survive-RL', '_blank')">View on GitHub</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="gridder my-3">
+
         <!--TRANSONIC-->
-        <div class="grid-item design wow zoomIn">
-          <div class="img-place" data-src="../assets/img/Transonic_Flow_Ansys2.png" data-fancybox data-caption="<h5 class='fg-theme'>Transonic Flow Modelling in Ansys.</h5> <p>Solo Project</p>">
-            <div class="img-place">
-              <img src="../assets/img/Transonic_Flow_Ansys.png" alt="">
-            </div>
-            <div class="caption">
-              <h5 class="fg-theme">Transonic Flow Modelling in Ansys.</h5>
-              <p>Modeled the transonic flow of air over the airfoil using ANSYS Fluent(CFD).<br> <br> <br> <br> <br> </p>
+        <div class="col grid-item design wow zoomIn">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="img-place" data-src="../assets/img/Transonic_Flow_Ansys2.png" data-fancybox data-caption="<h5 class='fg-theme'>Transonic Flow Modelling in Ansys.</h5> <p>Solo Project</p>">
+              <img src="../assets/img/Transonic_Flow_Ansys.png" alt="" class="card-img-top rounded-top">
+              <div class="caption p-3">
+                <h5 class="fg-theme">Transonic Flow Modelling in Ansys.</h5>
+                <p>Modeled transonic air flow over airfoil using ANSYS Fluent (CFD).</p>
+              </div>
             </div>
           </div>
         </div>
+
         <!--BLOOD FLOW-->
-        <div class="grid-item design wow zoomIn">
-          <div class="img-place" data-src="../assets/img/Bifurcated_Artery2.png" data-fancybox data-caption="<h5 class='fg-theme'>Blood Flow Analysis in a Bifurcated Artery using Ansys.</h5> <p>Solo Project</p>">
-            <div class="img-place">
-              <img src="../assets/img/Bifurcated_Artery.png" alt="">
-            </div>
-            <div class="caption">
-              <h5 class="fg-theme">Blood Flow Analysis in a Bifurcated Artery using Ansys</h5>
-              <p>Modeled the flow of blood in a Bifurcated Artery using ANSYS Fluent(CFD). Useful for creating micro/nano robots for drug delivery.</p>
+        <div class="col grid-item design wow zoomIn">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="img-place" data-src="../assets/img/Bifurcated_Artery2.png" data-fancybox data-caption="<h5 class='fg-theme'>Blood Flow Analysis in a Bifurcated Artery using Ansys.</h5> <p>Solo Project</p>">
+              <img src="../assets/img/Bifurcated_Artery.png" alt="" class="card-img-top rounded-top">
+              <div class="caption p-3">
+                <h5 class="fg-theme">Blood Flow Analysis in a Bifurcated Artery using Ansys</h5>
+                <p>Modeled blood flow in bifurcated artery using ANSYS Fluent (CFD). Useful for micro/nano robot drug delivery.</p>
+              </div>
             </div>
           </div>
         </div>
+
         <!--STAIR CLIMBER-->
-        <div class="grid-item design wow zoomIn">
-          <div class="img-place" data-src="../assets/img/stair_climber_collage.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Design of Stair Climber Robot.</h5> <p>Solo Project</p>">
-            <div class="img-place">
-              <img src="../assets/img/stair_climber_thumb.png" alt="">
-            </div>
-            <div class="caption">
-              <h5 class="fg-theme">Design of Stair Climber Robot.</h5>
-              <p>The inspiration for this design comes from the way caterpillars and snakes perform locomotion. Made using SolidWorks.</p>
+        <div class="col grid-item design wow zoomIn">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="img-place" data-src="../assets/img/stair_climber_collage.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Design of Stair Climber Robot.</h5> <p>Solo Project</p>">
+              <img src="../assets/img/stair_climber_thumb.png" alt="" class="card-img-top rounded-top">
+              <div class="caption p-3">
+                <h5 class="fg-theme">Design of Stair Climber Robot.</h5>
+                <p>Inspired by caterpillar and snake locomotion. Designed in SolidWorks.</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="gridder my-3">
+
         <!--MANDELBROT-->
-        <div class="grid-item simulation wow zoomIn">
-          <div class="img-place" data-src="../assets/img/Creative_thumb.png" data-fancybox data-caption="<h5 class='fg-theme'>Mandelbrot Set Simulation.</h5> <p>Solo Project</p>">
-            <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/YSdz5spfZLk?si=wsAkIvLCE75tGPf0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="caption">
-              <h5 class="fg-theme">Mandelbrot Set Simulation.</h5>
-              <p>Zooming of Mandelbrot set(fractal).</p>
-              <button class="btn btn-theme-outline" onclick="window.open('https://github.com/Mandred009/Mandelbrot_Set', '_blank')">View on GitHub</button>
+        <div class="col grid-item software wow zoomIn">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="img-place" data-src="../assets/img/Creative_thumb.png" data-fancybox data-caption="<h5 class='fg-theme'>Mandelbrot Set Simulation.</h5> <p>Solo Project</p>">
+              <div class="video-container rounded-top">
+                <iframe src="https://www.youtube.com/embed/YSdz5spfZLk?si=wsAkIvLCE75tGPf0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="caption p-3">
+                <h5 class="fg-theme">Mandelbrot Set Simulation.</h5>
+                <p>Zooming of Mandelbrot set (fractal).</p>
+                <button class="btn btn-theme-outline btn-sm" onclick="window.open('https://github.com/Mandred009/Mandelbrot_Set', '_blank')">View on GitHub</button>
+              </div>
             </div>
           </div>
         </div>
-        
-        
+
+        <!--Conways-->
+        <div class="col grid-item software wow zoomIn">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="img-place" data-src="../assets/img/Conways_game.png" data-fancybox data-caption="<h5 class='fg-theme'>Conways Game of Life Simulation.</h5> <p>Solo Project</p>">
+              <div class="video-container rounded-top">
+                <iframe src="https://www.youtube.com/embed/GL4QRl-aSBo?si=OhWNMFSkn2HUUiSe" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="caption p-3">
+                <h5 class="fg-theme">Conways Game of Life Simulation</h5>
+                <p>Cellular automata evolution using a set of rules.</p>
+                <button class="btn btn-theme-outline btn-sm" onclick="window.open('https://github.com/Mandred009/Conway-s-Pygame-of-Life', '_blank')">View on GitHub</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div> <!-- End gridder -->
     </div>
-  </div> <!-- End Portfolio page -->
-  
-  
+  </div>
   
   <!-- Publi -->
   <div class="vg-page page-publications" id="publications">
     <div class="container">
-      <!-- <div class="text-center">
-        <div class="badge badge-subhead wow fadeInUp">Publications</div>
-      </div> -->
       <h1 class="text-center fw-normal wow fadeInUp">Publications</h1>
       <div class="row post-grid">
         <div class="col-md-6 col-lg-4 wow fadeInUp">
@@ -511,9 +672,21 @@
               </div>
           </div>
         </div>
+        <div class="col-md-6 col-lg-4 wow fadeInUp">
+          <div class="card">
+              <div class="caption">
+                <h5 class="fg-theme">CERBRUS: An Open-Source Quadruped Robot with a Front-Mouthed Gripper Inspired by Ant Morphology</h5>
+                <p> <b> Authors:</b> B.V.Harshavardhan, R Prasanth Kumar<br><br>
+                  <b>Journal/Conference:</b> KirIITH (Indian Institute of Technology Hyderabad, ISSN: 2583-7222)<br><br>
+                  <b>Year:</b> 2025</p>
+                <button class="btn btn-theme-outline" onclick="window.open('https://online.fliphtml5.com/vrhdl/lwhk/#p=6', '_blank')">View Publication</button>
+              </div>
+          </div>
+        </div>
       </div>
     </div>
   </div> <!-- End Publi -->
+
 <!-- Certificates -->
 <div class="vg-page page-certificates" id="certificates">
   <div class="container">
@@ -648,6 +821,8 @@
                 <h5 class="fg-theme">Writings</h5>
                 <p><b>></b> I write articles on Medium.com on various projects.<br></p>
                 <button class="btn btn-theme-outline" onclick="window.open('https://medium.com/@mandredking', '_blank')">Medium Profile</button>
+                <p><br><b>></b> I also have a blog dedicated to robotics and concepts behind my projects.<br></p>
+                <button class="btn btn-theme-outline" onclick="window.open('https://roboticsrave.blogspot.com/', '_blank')">Robotics Rave Blog</button>
                 <p><br><b>></b> Science Fiction is also something I am fond of and am trying to write down the stories in my head.<br></p>
                 <button class="btn btn-theme-outline" onclick="window.open('https://www.inkitt.com/primordial', '_blank')">Inkitt Profile</button>
               </div>
