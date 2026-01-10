@@ -138,11 +138,6 @@
         <button class="navbar-toggler" data-toggle="collapse" data-target="#main-navbar" aria-expanded="true">
           <span class="ti-menu"></span>
         </button>
-        <ul class="nav ml-auto">
-          <li class="nav-item">
-            <div class="sci-fi-element"><b>B.V</b></div>
-          </li>
-        </ul>
         <div class="collapse navbar-collapse" id="main-navbar">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item active">
@@ -183,8 +178,13 @@
     <!-- Caption header -->
     <div class="caption-header text-center wow zoomInDown">
       <h5 class="fw-normal">I'm</h5>
-      <h1 class="fw-light mb-4"><b class="fg-theme">Bontalakoti</b> Venkata Harshavardhan </h1>
-      <div class="badge">Robotics Engineer</div>
+      <h1 class="fw-light mb-4"><b class="fg-theme">Bontalakoti</b> Venkata Harshavardhan</h1>
+      <!-- <p><a href="../assets/Resume.pdf"><button class="btn btn-theme-outline">Resume</button></a></p> -->
+       <p>
+        <a href="../assets/Resume.pdf" style="text-decoration: none;">
+          <div class="sci-fi-element"><b style="color: #ffffff;">Resume</b></div>
+        </a>
+      </p>
     </div> <!-- End Caption header -->
   </div>
   
@@ -203,18 +203,16 @@
             <b>Aiming for <span style="color: #e6490b;">"A Future Beyond Our Star"</span></b><br>
             I am presently a graduate student pursuing robotics engineering from Johns Hopkins University. <br><br>
             I specialize in the design, development, and implementation of robotic systems.  <br><br>
-            My expertise lies in integrating sensors, actuators, and control systems, as well as programming robots using various languages and software.<br><br>
+           My work focuses on enabling robots to understand their environment — through computer vision, multi-sensor integration, and SLAM systems. From building a vision-based quadruped robot with real-time pose estimation to developing human-guided SLAM that maps 25% faster, I'm passionate about perception systems that work in the real world.<br><br>
             I believe in multi-disciplinary approach to robotics where I try to understand both hardware and software aspects of these wonderful machines.<br><br>
             My main areas of interest are: 
           </p>
           <ul class="theme-list">
-            <li><b>Perception</b></li>
-            <li><b>Navigation</b></li>
+            <li><b>Perception and Computer Vision</b></li>
+            <li><b>Planning and Navigation</b></li>
             <li><b>Reinforcement Learning</b></li>
-            <li><b>Artificial Intelligence</b></li>
-            <li><b>Control Systems</b></li>
+            <li><b>Deep Learning and AI</b></li>
           </ul>
-          <p><a href="../assets/Resume_25_Per4.pdf"><button class="btn btn-theme-outline">Resume</button></a></p>
           
         </div>
       </div>
@@ -231,7 +229,7 @@
           <span class="badge">MATLAB &amp; Simulink</span>
           <span class="badge">C &amp; C++</span>
           <span class="badge">C# &amp; Unity</span>
-          <span class="badge">ROS2 &amp; Gazebo</span>
+          <span class="badge">ROS 1/2 &amp; Gazebo</span>
           <span class="badge">SolidWorks</span>
           <span class="badge">ANSYS (CFD &amp; FEA)</span>
           <span class="badge">Arduino &amp; ESP32</span>
@@ -267,7 +265,7 @@
             <div class="timeline__content">
               <h5>Johns Hopkins University</h5>
               <span class="timeline__date">2025 – Present</span>
-              <p>M.S.E in Robotics<br></p>
+              <p>M.S.E in Robotics<br>GPA: 3.7/4.0</p>
             </div>
           </div>
 
@@ -341,12 +339,11 @@
           <div class="timeline__item">
             <div class="timeline__marker"></div>
             <div class="timeline__content">
-              <h5>Instruments Research & Development Establishment (DRDO)</h5>
+              <h5>Defence Research & Development Organization (DRDO)</h5>
               <span class="timeline__date">Summer Intern &mdash; May 2023 – Jul 2023</span>
               <ul>
                 <li>Designed and analyzed ammunition mounting systems for UAVs, UGVs, and naval vessels.</li>
-                <li>Prototyped an autonomous coastal surveillance system using distributed sensor-equipped ocean buoys, reducing projected
- operational costs by more than 15%</li>
+                <li>Prototyped an autonomous coastal surveillance system using distributed sensor-equipped ocean buoys.</li>
                 <li>Assisted in developing a scalable hardware-software integration pipeline for deploying multi-sensor payloads
  (EO/IR cameras, LiDAR) on mobile defense platforms.</li>
               </ul>
@@ -361,7 +358,7 @@
               <span class="timeline__date">Undergraduate Project &mdash; Aug 2024 – May 2025</span>
               <ul>
                 <li>Designed and built a 12-DOF quadruped robot from the ground up.</li>
-                <li>Developed an ant-inspired gripper for the quadruped—improved object transportation.</li>
+                <li>Developed an ant-inspired gripper for the quadruped—improved the task of object retrieval.</li>
                 <li>Implemented control architecture on Raspberry Pi 5 (Ubuntu, ROS2) for autonomous locomotion.</li>
               </ul>
               <p><strong>Supervisor:</strong> Dr. R. Prasanth Kumar</p>
@@ -377,7 +374,7 @@
               <ul>
                 <li>Set up and calibrated a micro-stereolithography 3D printer for high-precision fabrication.</li>
                 <li>Benchmarked printed outputs against Nitinol-spring actuators to assess performance.</li>
-                <li>Developed complete printer control firmware—boosted print speed by around 10%.</li>
+                <li>Developed complete printer control firmware—boosted print speed by 12%.</li>
               </ul>
               <p><strong>Supervisor:</strong> Dr. Yogesh Singh</p>
             </div>
@@ -422,6 +419,22 @@
           </div>
         </div>
 
+        <!-- CLIPSORT -->
+         <div class="col grid-item perception localization navigation software ai wow zoomIn">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="img-place" data-src="../assets/img/clipsort.gif" data-fancybox data-caption="<h5 class='fg-theme'>CLIPSORT- DeepSort Multiobject Tracking Framework with CLIP features</h5> <p>Solo Project</p>">
+              <div class="video-container rounded-top">
+                <iframe src="https://www.youtube.com/embed/DlhetgxPCvI?si=iBuH10A46xOfOGKK" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="caption p-3">
+                <h5 class="fg-theme">CLIPSORT- DeepSort Multiobject Tracking Framework with CLIP features</h5>
+                <p>A from-scratch implementation of DeepSORT for multi-object tracking, featuring CLIP, DINOv2, and ResNet feature extractors..</p>
+                <button class="btn btn-theme-outline btn-sm" onclick="window.open('https://github.com/Mandred009/CLIPSORT-DeepSort_Multiobject_Tracking_Framework_with_CLIP_features', '_blank')">View on GitHub</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- PPO RL -->
          <div class="col grid-item rl wow zoomIn">
           <div class="card h-100 shadow-sm border-0">
@@ -437,6 +450,21 @@
             </div>
           </div>
         </div>
+
+        <!-- Learning to Push RL -->
+      <div class="col grid-item rl wow zoomIn">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="img-place" data-src="../assets/img/learningtopush.gif" data-fancybox data-caption="<h5 class='fg-theme'>SAC for Panda Robot Arm</h5> <p>Group Project</p>">
+            <!-- GIF Image instead of video -->
+            <img src="../assets/img/learningtopush.gif" alt="Learning to Push - Deep RL for Robot Manipulation" class="card-img-top rounded-top" style="width: 100%; height: auto; object-fit: cover;">
+            <div class="caption p-3">
+              <h5 class="fg-theme">Learning to Push: Deep RL for Robot Manipulation</h5>
+              <p>Implemented SAC and PPO RL algorithms for robot manipulation task of learning to push an object to desired place.</p>
+              <button class="btn btn-theme-outline btn-sm" onclick="window.open('https://github.com/Mandred009/Deep-RL-for-Robot-Arm', '_blank')">View on GitHub</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
         <!-- SAC RL -->
          <div class="col grid-item rl wow zoomIn">
@@ -803,6 +831,7 @@
                 <h5 class="fg-theme">Position of Responsibility</h5>
                 <p><b>></b> <b>Team Captain</b> for the Team Four Squared.  Our team took part in ASME EFX 2023 held in Bangalore and was among the top 5 teams.<br></p>
                 <p><b>></b> Took the initiative to <b>teach the students Prototyping using Arduino</b> as a part of Innovation Courses under ASME Student Section.<br></p>
+                <p><b>></b> Teaching Maths to primary school students in the Henderson Hopkins School in Baltimore as a part of Campus Program.<br></p>
               </div>
           </div>
         </div>
@@ -811,7 +840,7 @@
               <div class="caption">
                 <h5 class="fg-theme">Achievements</h5>
                 <p><b>></b> Selected for the <b>Student Exchange Program</b> at the Indian Institute of Technology Hyderabad(IITH). This opportunity was given to only the top 10% of the students from the batch of 2021-2025.<br></p>
-                <p><b>></b> Our team emerged as one of the 7 winners out of 30 teams in the prestigious <b>Smart India Hackathon 2024 Hardware Edition</b>. We secured the win for our innovative solution to the Smart Automation problem statement.<br></p>
+                <p><b>></b> Our team emerged as one of the winners out of more than a 100 teams in the prestigious <b>Smart India Hackathon 2024 Hardware Edition</b>. We secured the win for our innovative solution to the Smart Automation problem statement.<br></p>
                 <p><b>></b> Won the second place overall at <b>YCP Hacks</b> held at York College Pennsylvania <b>(MLH 2025)</b>. Also our team was the winner of the hardware track. <br></p>
               </div>
           </div>
@@ -838,6 +867,7 @@
                 <p><b>></b>  Sapiens A Brief History of Humankind (Yuval Noah Harari)<br></p>
                 <p><b>></b>  Neuromancer (William Gibson)<br></p>
                 <p><b>></b>  The Three Body Problem (Liu Cixin)<br></p>
+                <p><b>></b>  Brothers Karamazov (Fyodor Dostoevsky)<br></p>
               </div>
           </div>
         </div>
@@ -914,7 +944,3 @@
   
 </body>
 </html>
-
-
-
-
